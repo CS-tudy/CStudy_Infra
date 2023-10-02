@@ -1,16 +1,21 @@
+## source : 인스턴스 복사 디렉토리
+## destination : 인스턴스에서 파일이 복사되는 위치
+## overwrite : 복사할 위치에 파일이 있는 경우 대체
 version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/devProject
+    destination: /home/ubuntu/CStudy
     overwrite: yes
 
+## object : 권한이 지정되는 파일 또는 디렉토리
 permissions:
   - object: /
     pattern: "**"
     owner: ubuntu
     group: ubuntu
 
+## 파일 설치 뒤, AfterInstall에서 기존에 실행되던 애플리케이션을 종료시키고, ApplicationStart에서 새로운 애플리케이션을 실행시킨다.
 hooks:
   ApplicationStart:
     - location: scripts/gh_deploy.sh
