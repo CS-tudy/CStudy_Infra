@@ -31,3 +31,6 @@ sudo yum install cronie
 
 ```
 
+### 3. 추가로 해보자
+- 현재는 한개의 Redis로 되어져 있다.
+- 클러스터를 만들어서 master가 죽으면 slave가 백업된 파일을 기반으로 실행되게 만들기
